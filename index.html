@@ -1,394 +1,54 @@
 <!DOCTYPE html>
-<html class="nojs html css_verticalspacer" lang="en-US">
- <head>
+<html lang="en-US">
 
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-  <meta name="generator" content="2018.0.0.379"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-  <script type="text/javascript">
-   // Update the 'nojs'/'js' class on the html node
-document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
+<head>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <title>StudentHack VI</title>
+    <link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-// Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "jquery.museresponsive.js", "require.js", "index.css"], "outOfDate":[]};
-</script>
-  
-  <title>Home</title>
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=200551699"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=214168057" id="pagesheet"/>
-  <!-- IE-only CSS -->
-  <!--[if lt IE 9]>
-  <link rel="stylesheet" type="text/css" href="css/iefonts_index.css?crc=336089664"/>
-  <link rel="stylesheet" type="text/css" href="css/nomq_index.css?crc=3800294800" id="nomq_pagesheet"/>
-  <![endif]-->
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   var __adobewebfontsappname__ = "muse";
-</script>
-  <!-- JS includes -->
-  <script src="https://webfonts.creativecloud.com/source-sans-pro:n3,n4:default.js" type="text/javascript"></script>
-    <!--custom head HTML-->
-  <style type="text/css">
-html,body{ overflow-x:hidden; }
+<body>
+    <div id="background" class="fullscreen parallax--medium background"></div>
+    <div id="stars" class="fullscreen parallax--slow background"></div>
+    <div id="falcon" class="fullscreen parallax--fast background"></div>
+    <div id="meteor" class="fullscreen parallax--medium background"></div>
+    <div id="logo"></div>
 
-.fullHeight {
-  height: 100vh;
-}
+    <main id="main">
+        <!-- Hero page -->
+        <section id="hero" class="parallax--fast">
+            <ul id="timer" class="timerGrid text">
+                <li id="days">
+                    <p id="daysNumber" class="timerNumber">25</p>
+                    <p class="timerText">Days</p>
+                </li>
+                <li id="hours">
+                    <p id="hoursNumber" class="timerNumber">20</p>
+                    <p class="timerText">Hours</p>
+                </li>
+                <li id="minutes">
+                    <p id="minutesNumber" class="timerNumber">40</p>
+                    <p class="timerText">Minutes</p>
+                </li>
+                <li id="seconds">
+                    <p id="secondsNumber" class="timerNumber">20</p>
+                    <p class="timerText">Seconds</p>
+                </li>
+            </ul>
+            <header id="title" class="text">StudentHack VI</header>
+            <p id="eventInfo" class="text">MMU Business School, Manchester
+                <br> 28 - 29 April 2018</p>
+        </section>
+        <div id="foreground" class="fullscreen background"></div>
 
-.fullHeight2 {
-  height: 100vh;
-}
+        <section id="footer">
 
+        </section>
+    </main>
+</body>
 
-.halfWidth {
-  width: 50vw;
-  height: 100vh;
-}
-</style>
-  <!--HTML Widget code-->
-  
-<style>
-* {
-       transition:all .5s ease;
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-o-transition: all .5s ease;
-}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
 
-.clip_frame, .Container, .ContainerGroup, .verticalspacer, #preloader,{
-transition:none !important;
--webkit-transition:none !important;
--moz-transition:none !important;
--o-transition:none !important;
-}
-
-.SlideShowContentPanel *{
-transition:none !important;
--webkit-transition:none !important;
--moz-transition:none !important;
--o-transition:none !important;
-}
-
-.ContainerGroup, .wp-panel, wp-panel-active{
-transition:none !important;
--webkit-transition:none !important;
--moz-transition:none !important;
--o-transition:none !important;
-}
-
-.js div#preloader{
-transition:none !important;
--webkit-transition:none !important;
--moz-transition:none !important;
--o-transition:none !important;
-}
-
-</style>
-
- </head>
- <body>
-
-  <div class="breakpoint active" id="bp_infinity" data-min-width="837"><!-- responsive breakpoint node -->
-   <div class="halfWidth clearfix borderbox" id="page"><!-- group -->
-    <div class="grpelem shared_content" id="u2023" data-content-guid="u2023_content"><!-- custom html -->
-     <script>
-
-// Set the date we're counting down to
-var countDownDate = new Date("Apr 26, 2018 15:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementsByClassName("days")[0].innerHTML = days;
-  document.getElementsByClassName("hours")[0].innerHTML = hours;
-  document.getElementsByClassName("minutes")[0].innerHTML = minutes;
-  document.getElementsByClassName("seconds")[0].innerHTML = seconds;
-
-}, 1000);
-
-
-</script>
-    </div>
-    <div class="clearfix grpelem" id="ppu1686"><!-- column -->
-     <div class="clearfix colelem" id="pu1686"><!-- group -->
-      <div class="browser_width grpelem" id="u1686-bw">
-       <div class="museBGSize fullHeight" id="u1686"><!-- group -->
-        <div class="clearfix" id="u1686_align_to_page">
-         <a class="anchor_item grpelem shared_content" id="top" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-content-guid="top_content"></a>
-        </div>
-       </div>
-      </div>
-      <div class="browser_width grpelem" id="u1957-bw">
-       <div class="pointer_cursor rgba-background fullHeight2" id="u1957"><!-- group -->
-        <a class="block anim_swing shared_content" href="index.html#top" data-content-guid="u1957_0_content"><!-- Block link tag --></a>
-        <div class="clearfix" id="u1957_align_to_page">
-         <div class="clearfix grpelem" id="u1932"><!-- column -->
-          <div class="clearfix colelem" id="u1639"><!-- group -->
-           <div class="clearfix grpelem" id="u1308"><!-- column -->
-            <div class="clearfix colelem shared_content" id="u1828-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true" data-content-guid="u1828-4_content"><!-- content -->
-             <p>StudentHack VI</p>
-            </div>
-            <div class="clearfix colelem" id="pu1304"><!-- group -->
-             <div class="clearfix grpelem shared_content" id="u1304" data-content-guid="u1304_content"><!-- column -->
-              <div class="days ts03-Title-Source-Sans-Pro-Light clearfix colelem" id="u577-4" data-sizePolicy="fixed" data-pintopage="page_fluidx"><!-- content -->
-               <h1>50</h1>
-              </div>
-              <div class="days ts03-Title-Source-Sans-Pro-Light clearfix colelem" id="u636-4" data-sizePolicy="fixed" data-pintopage="page_fluidx"><!-- content -->
-               <h1>days</h1>
-              </div>
-             </div>
-             <div class="clearfix grpelem shared_content" id="u748" data-content-guid="u748_content"><!-- column -->
-              <div class="hours ts03-Title-Source-Sans-Pro-Light clearfix colelem" id="u750-4" data-sizePolicy="fixed" data-pintopage="page_fluidx"><!-- content -->
-               <h1>12</h1>
-              </div>
-              <div class="ts03-Title-Source-Sans-Pro-Light clearfix colelem" id="u749-4" data-sizePolicy="fixed" data-pintopage="page_fluidx"><!-- content -->
-               <h1>hours</h1>
-              </div>
-             </div>
-             <div class="clearfix grpelem shared_content" id="u788" data-content-guid="u788_content"><!-- column -->
-              <div class="minutes ts03-Title-Source-Sans-Pro-Light clearfix colelem" id="u789-4" data-sizePolicy="fixed" data-pintopage="page_fluidx"><!-- content -->
-               <h1>27</h1>
-              </div>
-              <div class="ts03-Title-Source-Sans-Pro-Light clearfix colelem" id="u790-4" data-sizePolicy="fixed" data-pintopage="page_fluidx"><!-- content -->
-               <h1>minutes</h1>
-              </div>
-             </div>
-             <div class="clearfix grpelem shared_content" id="u826" data-content-guid="u826_content"><!-- column -->
-              <div class="seconds ts03-Title-Source-Sans-Pro-Light clearfix colelem" id="u827-4" data-sizePolicy="fixed" data-pintopage="page_fluidx"><!-- content -->
-               <h1>05</h1>
-              </div>
-              <div class="ts03-Title-Source-Sans-Pro-Light clearfix colelem" id="u828-4" data-sizePolicy="fixed" data-pintopage="page_fluidx"><!-- content -->
-               <h1>seconds</h1>
-              </div>
-             </div>
-             <div class="clearfix grpelem shared_content" id="u920-7" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true" data-content-guid="u920-7_content"><!-- content -->
-              <p id="u920-2">Only so little time is left until the start of the biggest hackathon in Manchester</p>
-              <p id="u920-4">Are you ready?</p>
-              <p>&nbsp;</p>
-             </div>
-            </div>
-           </div>
-          </div>
-          <div class="clearfix colelem shared_content" id="u1923" data-content-guid="u1923_content"><!-- group -->
-           <div class="pointer_cursor rounded-corners clearfix grpelem" id="u1913"><!-- group -->
-            <a class="block anim_swing" href="index.html#two"><!-- Block link tag --></a>
-            <a class="nonblock nontext anim_swing clearfix grpelem" id="u1918-4" href="index.html#two" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content --><p>Find out more</p></a>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="clearfix colelem" id="ptwo"><!-- group -->
-      <a class="anchor_item grpelem shared_content" id="two" data-sizePolicy="fixed" data-pintopage="page_fluidx" data-content-guid="two_content"></a>
-      <div class="browser_width grpelem" id="u1522-bw">
-       <div class="fullHeight" id="u1522"><!-- group -->
-        <div class="clearfix" id="u1522_align_to_page">
-         <div class="halfWidth grpelem shared_content" id="u1904" data-sizePolicy="fluidWidth" data-pintopage="page_fixedRight" data-content-guid="u1904_content"><!-- simple frame --></div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="clearfix grpelem shared_content" id="pu271-4" data-content-guid="pu271-4_content"><!-- group -->
-     <div class="rounded-corners clearfix" id="u271-4" data-muse-temp-textContainer-sizePolicy="true" data-muse-temp-textContainer-pinning="true"><!-- content -->
-      <p>Notify me</p>
-     </div>
-     <div class="museBGSize" id="u248"><!-- simple frame --></div>
-    </div>
-    <div class="clearfix grpelem shared_content" id="pu283" data-content-guid="pu283_content"><!-- column -->
-     <div class="size_fixed colelem" id="u283" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"><!-- custom html -->
-      
-            
-     </div>
-     <div class="size_fixed colelem" id="u1513" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"><!-- custom html -->
-      
-            
-     </div>
-    </div>
-    <div class="verticalspacer" data-offset-top="1449" data-content-above-spacer="1448" data-content-below-spacer="61" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
-    <div class="browser_width grpelem shared_content" id="u1858-bw" data-content-guid="u1858-bw_content">
-     <div id="u1858"><!-- simple frame --></div>
-    </div>
-   </div>
-  </div>
-  <div class="breakpoint" id="bp_836" data-min-width="323" data-max-width="836"><!-- responsive breakpoint node -->
-   <div class="halfWidth clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
-    <div class="clearfix grpelem temp_no_id" data-orig-id="pu1686"><!-- group -->
-     <div class="browser_width grpelem temp_no_id" data-orig-id="u1686-bw">
-      <div class="museBGSize fullHeight temp_no_id" data-orig-id="u1686"><!-- column -->
-       <div class="clearfix temp_no_id" data-orig-id="u1686_align_to_page">
-        <span class="anchor_item colelem placeholder" data-placeholder-for="top_content"><!-- placeholder node --></span>
-        <span class="anchor_item colelem placeholder" data-placeholder-for="two_content"><!-- placeholder node --></span>
-       </div>
-      </div>
-     </div>
-     <div class="browser_width grpelem temp_no_id" data-orig-id="u1957-bw">
-      <div class="pointer_cursor rgba-background fullHeight2 temp_no_id" data-orig-id="u1957"><!-- group -->
-       <span class="block anim_swing placeholder" data-placeholder-for="u1957_0_content"><!-- placeholder node --></span>
-       <div class="clearfix temp_no_id" data-orig-id="u1957_align_to_page">
-        <div class="clearfix grpelem temp_no_id" data-orig-id="u1932"><!-- group -->
-         <div class="clearfix grpelem temp_no_id" data-orig-id="u1639"><!-- group -->
-          <div class="clearfix grpelem temp_no_id" data-orig-id="u1308"><!-- group -->
-           <span class="clearfix grpelem placeholder" data-placeholder-for="u1304_content"><!-- placeholder node --></span>
-           <span class="clearfix grpelem placeholder" data-placeholder-for="u748_content"><!-- placeholder node --></span>
-           <span class="clearfix grpelem placeholder" data-placeholder-for="u788_content"><!-- placeholder node --></span>
-           <span class="clearfix grpelem placeholder" data-placeholder-for="u826_content"><!-- placeholder node --></span>
-           <span class="clearfix grpelem placeholder" data-placeholder-for="u920-7_content"><!-- placeholder node --></span>
-           <span class="clearfix grpelem placeholder" data-placeholder-for="u1828-4_content"><!-- placeholder node --></span>
-          </div>
-         </div>
-         <span class="clearfix grpelem placeholder" data-placeholder-for="u1923_content"><!-- placeholder node --></span>
-        </div>
-        <span class="grpelem placeholder" data-placeholder-for="u2023_content"><!-- placeholder node --></span>
-       </div>
-      </div>
-     </div>
-     <div class="fullHeight grpelem temp_no_id shared_content" data-sizePolicy="fluidWidth" data-pintopage="page_fixedCenter" data-orig-id="u1522" data-content-guid="u1522_content"><!-- simple frame --></div>
-     <span class="halfWidth grpelem placeholder" data-placeholder-for="u1904_content"><!-- placeholder node --></span>
-    </div>
-    <span class="clearfix grpelem placeholder" data-placeholder-for="pu271-4_content"><!-- placeholder node --></span>
-    <span class="clearfix grpelem placeholder" data-placeholder-for="pu283_content"><!-- placeholder node --></span>
-    <div class="verticalspacer" data-offset-top="1432" data-content-above-spacer="1431" data-content-below-spacer="61" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
-    <span class="browser_width grpelem placeholder" data-placeholder-for="u1858-bw_content"><!-- placeholder node --></span>
-   </div>
-  </div>
-  <div class="breakpoint" id="bp_322" data-max-width="322"><!-- responsive breakpoint node -->
-   <div class="halfWidth clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
-    <span class="museBGSize fullHeight grpelem placeholder" data-placeholder-for="u1522_content"><!-- placeholder node --></span>
-    <div class="clearfix grpelem temp_no_id" data-orig-id="pu1686"><!-- group -->
-     <div class="browser_width grpelem temp_no_id" data-orig-id="u1686-bw">
-      <div class="fullHeight museBGSize temp_no_id" data-orig-id="u1686"><!-- column -->
-       <div class="clearfix temp_no_id" data-orig-id="u1686_align_to_page">
-        <span class="anchor_item colelem placeholder" data-placeholder-for="top_content"><!-- placeholder node --></span>
-        <span class="anchor_item colelem placeholder" data-placeholder-for="two_content"><!-- placeholder node --></span>
-       </div>
-      </div>
-     </div>
-     <div class="browser_width grpelem temp_no_id" data-orig-id="u1957-bw">
-      <div class="pointer_cursor rgba-background fullHeight2 temp_no_id" data-orig-id="u1957"><!-- group -->
-       <span class="block anim_swing placeholder" data-placeholder-for="u1957_0_content"><!-- placeholder node --></span>
-       <div class="clearfix temp_no_id" data-orig-id="u1957_align_to_page">
-        <div class="clearfix grpelem temp_no_id" data-orig-id="u1932"><!-- group -->
-         <div class="clearfix grpelem temp_no_id" data-orig-id="u1639"><!-- group -->
-          <div class="clearfix grpelem temp_no_id" data-orig-id="u1308"><!-- group -->
-           <div class="clearfix grpelem" id="pu920-7"><!-- group -->
-            <span class="clearfix grpelem placeholder" data-placeholder-for="u920-7_content"><!-- placeholder node --></span>
-            <span class="clearfix grpelem placeholder" data-placeholder-for="u1828-4_content"><!-- placeholder node --></span>
-           </div>
-           <div class="clearfix grpelem temp_no_id" data-orig-id="pu1304"><!-- group -->
-            <span class="clearfix grpelem placeholder" data-placeholder-for="u1304_content"><!-- placeholder node --></span>
-            <span class="clearfix grpelem placeholder" data-placeholder-for="u748_content"><!-- placeholder node --></span>
-            <span class="clearfix grpelem placeholder" data-placeholder-for="u788_content"><!-- placeholder node --></span>
-            <span class="clearfix grpelem placeholder" data-placeholder-for="u826_content"><!-- placeholder node --></span>
-           </div>
-          </div>
-         </div>
-         <span class="clearfix grpelem placeholder" data-placeholder-for="u1923_content"><!-- placeholder node --></span>
-        </div>
-        <span class="grpelem placeholder" data-placeholder-for="u2023_content"><!-- placeholder node --></span>
-       </div>
-      </div>
-     </div>
-     <span class="halfWidth grpelem placeholder" data-placeholder-for="u1904_content"><!-- placeholder node --></span>
-    </div>
-    <span class="clearfix grpelem placeholder" data-placeholder-for="pu271-4_content"><!-- placeholder node --></span>
-    <span class="clearfix grpelem placeholder" data-placeholder-for="pu283_content"><!-- placeholder node --></span>
-    <div class="verticalspacer" data-offset-top="1432" data-content-above-spacer="1431" data-content-below-spacer="61" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
-    <span class="browser_width grpelem placeholder" data-placeholder-for="u1858-bw_content"><!-- placeholder node --></span>
-   </div>
-  </div>
-  <!-- JS includes -->
-  <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js?crc=209076791" type="text/javascript">\x3C/script>');
-</script>
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   // Decide weather to suppress missing file error or not based on preference setting
-var suppressMissingFileError = false
-</script>
-  <script type="text/javascript">
-   window.Muse.assets.check=function(d){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},c=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
-16);return 0},g=function(g){for(var f=document.getElementsByTagName("link"),h=0;h<f.length;h++)if("text/css"==f[h].type){var i=(f[h].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!i||!i[1]||!i[2])break;b[i[1]]=i[2]}f=document.createElement("div");f.className="version";f.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(f);for(h=0;h<Muse.assets.required.length;){var i=Muse.assets.required[h],l=i.match(/([\w\-\.]+)\.(\w+)$/),k=l&&l[1]?
-l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(h,1),"undefined"!=typeof b[i]&&(k!=b[i]>>>24||l!=(b[i]&16777215))&&Muse.assets.outOfDate.push(i)):h++;f.className="version";break;case "js":h++;break;default:throw Error("Unsupported file type: "+l);}}d?d().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
-f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(f+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(f)):alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
-setTimeout(function(){g(!0)},5E3):g()}};
-var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.musepolyfill.bgsize","jquery.watch","jquery.museresponsive"],function(d){var $ = d;$(document).ready(function(){try{
-window.Muse.assets.check($);/* body */
-Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.resizeHeight('.browser_width');/* resize height */
-Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
-Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
-Muse.Utils.fullPage('#page');/* 100% height page */
-$( '.breakpoint' ).registerBreakpoint();/* Register breakpoints */
-Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
-
-</script>
-  <!-- RequireJS script -->
-  <script src="scripts/require.js?crc=4157109226" type="text/javascript" async data-main="scripts/museconfig.js?crc=4153641093" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
-  
-  <!--HTML Widget code-->
-  
-<script type="text/javascript">
-$(window).load(function(){var pos1=1;if(pos1===1){(function(){var delay=false;$(document).on('mousewheel DOMMouseScroll',function(event){event.preventDefault();if(delay)return;delay=true;setTimeout(function(){delay=false},800)
-var wd=event.originalEvent.wheelDelta||-event.originalEvent.detail;var XZ="";var a=$("a:not([href])").not(XZ.replace(/\b(?=\w)/g,'#'));if(wd<0){for(var i=0;i<a.length;i++){var t=a[i].getClientRects()[0].top;if(t>=85)break;}}else{for(var i=a.length-1;i>=0;i--){var t=a[i].getClientRects()[0].top;if(t<-85)break;}}
-var time=700;var easing='easeInOutCirc';$("html, body").animate({scrollTop:$(a[i]).offset().top},time,easing);});})();}});$(window).load(function(){var pos1=1;if(pos1===2){(function(){$(document).on('mousewheel DOMMouseScroll',function(event){var XZ="";var a=$("a:not([href])").not(XZ.replace(/\b(?=\w)/g,'.'));var x=$(a[a.length-1]).offset();var m=(x.top)+10;var fo=$(window).scrollTop();fo=fo+500;var dox=$(a[0]).offset();var dom=(dox.top)+200;var dofo=$(window).scrollTop();if(dofo<dom){if(event.originalEvent.deltaY<0){event.preventDefault();return;}}
-if(fo>m){if(event.originalEvent.deltaY>0){event.preventDefault();return;}}
-$("body").css("opacity","0");var timing=500+550;var fnz=500+450;setTimeout(function(){$("body").css("opacity","1");},timing);var wd=event.originalEvent.wheelDelta||-event.originalEvent.detail;var XZ="";var a=$("a:not([href])").not(XZ.replace(/\b(?=\w)/g,'#'));if(wd<0){for(var i=0;i<a.length;i++){var t=a[i].getClientRects()[0].top;if(t>=70)break;}}else{for(var i=a.length-1;i>=0;i--){var t=a[i].getClientRects()[0].top;if(t<-70)break;}}
-setTimeout(function(){$("html, body").animate({scrollTop:$(a[i]).offset().top},0);},fnz);});})();;}});
-
-jQuery.easing.jswing = jQuery.easing.swing;
-jQuery.extend(jQuery.easing, {
-    def: "easeOutQuad",
-    swing: function(e, f, a, h, g) {
-        return jQuery.easing[jQuery.easing.def](e, f, a, h, g)
-    },
-    easeInQuad: function(e, f, a, h, g) {
-        return h * (f /= g) * f + a
-    },
-    easeOutQuad: function(e, f, a, h, g) {
-        return -h * (f /= g) * (f - 2) + a
-    },
-    easeInOutQuad: function(e, f, a, h, g) {
-        if ((f /= g / 2) < 1) {
-            return h / 2 * f * f + a
-        }
-        return -h / 2 * ((--f) * (f - 2) - 1) + a
-    },
-    easeInCirc: function(e, f, a, h, g) {
-        return -h * (Math.sqrt(1 - (f /= g) * f) - 1) + a
-    },
-    easeOutCirc: function(e, f, a, h, g) {
-        return h * Math.sqrt(1 - (f = f / g - 1) * f) + a
-    },
-    easeInOutCirc: function(e, f, a, h, g) {
-        if ((f /= g / 2) < 1) {
-            return -h / 2 * (Math.sqrt(1 - f * f) - 1) + a
-        }
-        return h / 2 * (Math.sqrt(1 - (f -= 2) * f) + 1) + a
-    },
-});
-</script>
-
-   </body>
 </html>

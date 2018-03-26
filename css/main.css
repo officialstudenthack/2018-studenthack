@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "Dodge";
+    src: url('../fonts/DODGE.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas";
+    src: url('../fonts/BebasNeue Bold.otf') format("truetype");
+}
+
+/* Universal */
+
+/* Core */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    background-color: #2B263A;
+}
+
+.fullscreen {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background {
+    z-index: -1000;
+}
+
+#background {
+    background-image: url("../img/planets.png");
+}
+
+#stars {
+    background-image: url("../img/stars.png");
+}
+
+#falcon {
+    background-image: url("../img/falcon.png");
+}
+
+#meteor {
+    background-image: url("../img/meteor.png");
+}
+
+#foreground {
+    background-image: url("../img/foreground.png");
+    background-position: left;
+    z-index: 1000;
+}
+
+section {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.text {
+    color: white;
+}
+
+#logo {
+    position: absolute;
+    background-size: cover;
+    top: 3em;
+    left: 3em;
+    height: 7em;
+    width: 7em;
+    background-image: url("../img/logo.png");
+}
+
+/* Venue Section */
+
+#venue {
+    background-color: #28315A;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+
+#venueInformation {
+    background-color: #28315A;
+    background-color: transparent;
+}
+
+/* Grids */
+
+.timerGrid, .venueGrid {
+    display: grid;
+}
+
+/* Timer */
+
+#days {
+    grid-area: d;
+}
+
+#hours {
+    grid-area: h;
+}
+
+#minutes {
+    grid-area: m;
+}
+
+#seconds {
+    grid-area: s;
+}
+
+/* Desktop */
+
+/* Timer */
+
+#timer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "d h m s" "d h m s";
+    align-items: start;
+    list-style: none;
+    padding: 13% 10% 0 10%;
+    margin: 0;
+}
+
+.timerText {
+    font-family: Dodge;
+    font-size: 1.5em;
+    position: relative;
+    top: -1em;
+    padding: 0;
+    margin: 0;
+}
+
+.timerNumber {
+    font-family: Bebas;
+    font-size: 6em;
+    padding: 0;
+    margin: 0;
+}
+
+/* Title */
+
+#title {
+    position: relative;
+    top: 0;
+    font-family: "Dodge";
+    font-size: 6em;
+    width: 100%;
+    padding: 7% 0 0 0;
+    z-index: 1000;
+}
+
+#eventInfo {
+    position: relative;
+    top: -0.5em;
+    font-family: "Bebas";
+    font-size: 2em;
+    z-index: 1000;
+}
+
+/* Venue */
+
+.venueGrid {
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "i t";
+}
+
+#venuePicture {
+    background-image: url("../img/venue.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: "i";
+}
+
+#venueInformation {
+    grid-area: "t";
+}
+
+#venueText {
+    height: 45%;
+    font-family: Candal;
+    color: white;
+}
+
+#map {
+    width: 100%;
+    height: 51%;
+}
+
+/* Tablet */
+
+@media(max-width: 1024px) {
+    /* Core */
+    #foreground {
+        z-index: -1000;
+    }
+    /* Timer */
+    #timer {
+        padding: 20% 10% 0 10%;
+        margin: 0;
+    }
+    /* Title */
+    #title {
+        font-size: 4em;
+        padding: 10% 0 0 0;
+    }
+
+    #eventInfo {
+        font-size: 1.3em;
+    }
+    
+
+    #logo {
+        top: 2em;
+        left: 2em;
+        height: 5em;
+        width: 5em;
+    }
+}
+
+/* Phone */
+
+@media(max-width: 768px) {
+    /* Timer */
+    #timer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "d h" "d h" "m s" "m s";
+        padding: 10% 10% 0 10%;
+    }
+
+    .timerNumber {
+        font-size: 4.5em;
+    }
+
+    .timerText {
+        font-size: 1em;
+    }
+    /* Title */
+    #title {
+        font-size: 2em;
+        padding: 13% 0 0 0;
+    }
+
+    #eventInfo {
+        font-size: 1em;
+    }
+    /* Venue */
+    .venueGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "i" "t";
+    }
+
+    #logo {
+        top: 1em;
+        left: 1em;
+        height: 3em;
+        width: 3em;
+    }
+}
