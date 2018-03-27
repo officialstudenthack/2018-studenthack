@@ -73,8 +73,8 @@ section {
     background-size: cover;
     top: 3em;
     left: 3em;
-    height: 7em;
-    width: 7em;
+    height: 5em;
+    width: 5em;
     background-image: url("../img/logo.png");
     z-index: 10000;
 }
