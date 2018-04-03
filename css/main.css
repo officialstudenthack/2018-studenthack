@@ -449,4 +449,11 @@ span {
     .faqGrid {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    #ticketsBtn {
+        width: 4.5em;
+        height: 1.85em;
+        right: 1em;
+        top: 1.575em;
+    }
 }
