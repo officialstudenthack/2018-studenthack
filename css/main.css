@@ -8,9 +8,19 @@
     src: url('../fonts/BebasNeue Bold.otf') format("truetype");
 }
 
+@font-face {
+    font-family: "Candal";
+    src: url('../fonts/Candal.ttf') format("truetype");
+}
+
 /* Universal */
 
 /* Core */
+
+#faq {
+    position: absolute;
+    top: 100%;
+}
 
 html, body {
     margin: 0;
@@ -32,8 +42,27 @@ html, body {
     left: 0;
 }
 
+#foreground {
+    height: 330%;
+}
+
+.faqBG {
+    position: absolute;
+    top: 100%;
+    z-index: 1000000;
+    height: 230%;
+}
+
 .background {
     z-index: -1000;
+}
+
+#faqStars {
+    background-image: url("../img/faqStars.png");
+}
+
+#faqMeteor {
+    background-image: url("../img/faqMeteor.png");
 }
 
 #background {
@@ -73,18 +102,34 @@ section {
     background-size: cover;
     top: 3em;
     left: 3em;
-    height: 7em;
-    width: 7em;
+    height: 5em;
+    width: 5em;
     background-image: url("../img/logo.png");
-    z-index: 10000;
+    z-index: 10000199999;
+}
+
+#ticketsBtn {
+    width: 9em;
+    height: 3.7em;
+    z-index: 100000000;
+    position: absolute;
+    right: 3em;
+    top: 3.65em;
+    background-image: url("../img/ticketsBtn.png");
+    background-size: cover;
 }
 
 #footer {
     position: absolute;
-    top: 87%;
-    height: 13%;
+    top: 313%;
+    height: 8em;
     width: 100%;
-    z-index: 10000;
+    z-index: 100000000;
+}
+
+#footerText {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
 }
 
 .footerLogos {
@@ -94,9 +139,11 @@ section {
     align-items: center;
     grid-gap: 2em;
     position: absolute;
-    right: 2.5em;
-    bottom: 2em;
-    height: 1.5em;
+    left: 0;
+    right: 0;
+    bottom: 0em;
+    margin: auto;
+    height: 50%;
     width: 10.5em;
 }
 
@@ -214,6 +261,96 @@ section {
     z-index: 1000;
 }
 
+/* FAQ */
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    grid-row-gap: 5em;
+    z-index: 999999999;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 6em;
+    padding-bottom: 5em;
+    height: 210%;
+    width: 100%;
+}
+
+.faqQuestion {
+    position: relative;
+    bottom: 0;
+    margin: auto;
+    height: 370px;
+    width: 290px;
+}
+
+.faqQuestion:hover {
+    box-shadow: 0 -10px 100px rgba(138, 138, 138, 0.3); 
+}
+
+.questionBG {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 30px 195px;
+    grid-row-gap: 0;
+    height: 98%;
+    width: 100%;
+    background-color: #231F30;
+}
+
+.questionIcon {
+    /* background-color: red; */
+    color: white;
+    margin: auto;
+    position: relative;
+}
+
+.questionTitle {
+    height: 100%;
+    position: relative;
+    top: -30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.5em;
+}
+
+.questionText {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: bold;
+    font-size: 1em;
+    height: 100%;
+    line-height: 195px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    line-height: normal;
+}
+
+.cyanMarker {
+    background-color: #13C3D2
+}
+
+.redMarker {
+    background-color: #FC68AB
+}
+
+.orangeMarker {
+    background-color: #F49460
+}
+
 /* Venue */
 
 .venueGrid {
@@ -254,14 +391,6 @@ section {
         z-index: -1000;
     }
 
-    .footerLogos {
-        left: 0;
-        right: 0;
-        bottom: 0.7em;
-        margin: auto;
-        height: 50%;
-        width: 10.5em;
-    }
     /* Timer */
     #timer {
         padding: 20% 10% 0 10%;
@@ -272,20 +401,15 @@ section {
         font-size: 4em;
         padding: 10% 0 0 0;
     }
-
     #eventInfo {
         font-size: 1.3em;
     }
-    
-
     #logo {
         top: 2em;
         left: 2em;
         height: 5em;
         width: 5em;
     }
-
-
 }
 
 /* Phone */
@@ -297,11 +421,9 @@ section {
         grid-template-areas: "d h" "d h" "m s" "m s";
         padding: 10% 10% 0 10%;
     }
-
     .timerNumber {
         font-size: 4.5em;
     }
-
     .timerText {
         font-size: 1em;
     }
@@ -310,7 +432,6 @@ section {
         font-size: 2em;
         padding: 13% 0 0 0;
     }
-
     #eventInfo {
         font-size: 1em;
     }
@@ -319,11 +440,13 @@ section {
         grid-template-columns: 1fr;
         grid-template-areas: "i" "t";
     }
-
     #logo {
         top: 1em;
         left: 1em;
         height: 3em;
         width: 3em;
+    }
+    .faqGrid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

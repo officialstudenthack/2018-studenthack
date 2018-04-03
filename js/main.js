@@ -53,6 +53,7 @@ function parallax() {
     
     $('#falcon').css('left', falconLeft - (wScroll * fastDelta / falconXRatio) + 'px');
     $('#meteor').css('left', meteorLeft - (wScroll * mediumDelta / meteorXRatio) + 'px');
+    // $('#faq').css('background-position-y', '1000px');
 }
 
 // // Map

@@ -7,14 +7,19 @@
     <link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="background" class="fullscreen parallax--medium background"></div>
     <div id="stars" class="fullscreen parallax--slow background"></div>
+    <div id="faqStars" class="faqBG fullscreen"></div>
+    <div id="faqMeteor" class="faqBG fullscreen"></div>
     <div id="falcon" class="fullscreen parallax--fast background"></div>
     <div id="meteor" class="fullscreen parallax--medium background"></div>
     <div id="logo"></div>
+    <a href="https://www.eventbrite.co.uk/e/studenthack-vi-tickets-44580406195?aff=es2" id="ticketsBtn"></a>
 
     <main id="main">
         <!-- Hero page -->
@@ -42,11 +47,121 @@
                 <br> 28 - 29 April 2018</p>
         </section>
         <div id="foreground" class="fullscreen background"></div>
+        <section id="faq">
+            <header id="title" class="text">FAQ</header>
+            <div class="faqGrid">
+                <div class="faqQuestion cyanMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-money-bill-alt fa-4x questionIcon"></i>
+                        <p class="questionTitle text">Are tickets free?</p>
+                        <p class="questionText text">Yes, 100%</p>
+                    </div>
+                </div>
+                <div class="faqQuestion cyanMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-ticket-alt fa-4x questionIcon"></i>
+                        <p class="questionTitle text">Who can get a ticket?</p>
+                        <p class="questionText text">
+                            <span>
+                                All enrolled students over 18 and those who graduated in the last one year.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion cyanMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-globe fa-4x questionIcon"></i>
+                        <p class="questionTitle text">What if I study
+                            <br>outside the UK?</p>
+                        <p class="questionText text">
+                            <span>
+                                You are still welcome to join us! However, we cannot sponsor visas.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion orangeMarker">
+                    <div class="questionBG">
+                        <div class="questionBG">
+                            <i class="fas fa-question-circle fa-4x questionIcon"></i>
+                            <p class="questionTitle text">I haven’t coded much. Should I come?</p>
+                            <p class="questionText text">
+                                <span>
+                                    Hackathons are for beginners. Networking with and seeing awesome hackers in action will expose you to a tremendous amount
+                                    of knowledge. There is an amazing suit of industry experts and mentors that are happy
+                                    to assist you!
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faqQuestion orangeMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-laptop fa-4x questionIcon"></i>
+                        <p class="questionTitle text">What should I bring?</p>
+                        <p class="questionText text">
+                            <span>
+                                Bring your laptop, phone and chargers. Other things to consider: spare clothes, adapters, hardware and a sleeping bag, oh
+                                and don’t forget your enthusiasm! We are going to provide you with all the food, swag, sleeping
+                                rooms and the drinks that you will need.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion orangeMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-users fa-4x questionIcon"></i>
+                        <p class="questionTitle text">I don’t have a team. Help?</p>
+                        <p class="questionText text">
+                            <span>
+                                We encourage everybody to form a team with new people, regardless of whether you come with your buddies or not! We will organise
+                                a team-building session, where you will meet other participants just like you. We ask for
+                                the teams to be of 4 people maximum.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion redMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-star fa-4x questionIcon"></i>
+                        <p class="questionTitle text">What can I expect from StudentHack?</p>
+                        <p class="questionText text">
+                            <span>
+                                An entire weekend of great company, good food and plenty of swag! We’ll also have hardware and tons of mentors.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion redMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-plane fa-4x questionIcon"></i>
+                        <p class="questionTitle text">Do you offer travel reimbursement?</p>
+                        <p class="questionText text">
+                            <span>
+                                Unfortunately, we cannot reimburse you for your travel expenses.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion redMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-copyright fa-4x questionIcon"></i>
+                        <p class="questionTitle text">Who owns my IP/code/idea?</p>
+                        <p class="questionText text">
+                            <span>
+                                You own all the rights to your intellectual property. We won’t claim any right over anything made during this event. Neil Armstrong will not ask for anything this time.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div id="footer">
+            <p id="footerText" class="text">© 2018 HackSoc</p>
             <span class="footerLogos">
-                    <a href="https://www.facebook.com/studenthack/" class="footerLogo" id="facebook"></a>
-                    <a href="https://twitter.com/studenthack" class="footerLogo" id="twitter"></a>
-                    <a href="https://github.com/hacksoc-manchester/2018-studenthack" class="footerLogo" id="github"></a>
+                <a href="https://www.facebook.com/studenthack/" class="footerLogo" id="facebook"></a>
+                <a href="https://twitter.com/studenthack" class="footerLogo" id="twitter"></a>
+                <a href="https://github.com/hacksoc-manchester/2018-studenthack" class="footerLogo" id="github"></a>
             </span>
         </div>
     </main>
