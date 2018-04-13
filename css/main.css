@@ -13,16 +13,10 @@
     src: url('../fonts/Candal.ttf') format("truetype");
 }
 
-/* Universal */
-
 /* Core */
 
-#faq {
-    position: absolute;
-    top: 100%;
-}
-
 html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -30,190 +24,108 @@ html, body {
     background-color: #2B263A;
 }
 
-.fullscreen {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#foreground {
-    height: 330%;
-}
-
-.faqBG {
-    position: absolute;
-    top: 100%;
-    z-index: 1000000;
-    height: 230%;
-}
-
-.background {
-    z-index: -1000;
-}
-
-#faqStars {
-    background-image: url("../img/faqStars.png");
-}
-
-#faqMeteor {
-    background-image: url("../img/faqMeteor.png");
-}
-
-#background {
-    background-image: url("../img/planets.png");
-}
-
-#stars {
-    background-image: url("../img/stars.png");
-}
-
-#falcon {
-    background-image: url("../img/falcon.png");
-}
-
-#meteor {
-    background-image: url("../img/meteor.png");
-}
-
-#foreground {
-    background-image: url("../img/foreground.png");
-    background-position: left;
-    z-index: 1000;
+body {
+    position: relative;
 }
 
 section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.fullscreen {
     position: absolute;
-    min-height: 100%;
-    min-width: 100%;
+    background-size: cover;
+    background-position-y: bottom;
+    height: 100%;
+    width: 100%;
 }
 
 .text {
     color: white;
 }
 
+.grid {
+    display: grid;
+}
+
 #logo {
     position: fixed;
     background-size: cover;
-    top: 3em;
-    left: 3em;
-    height: 5em;
-    width: 5em;
+    top: 3rem;
+    left: 3rem;
+    height: 5rem;
+    width: 5rem;
     background-image: url("../img/logo.png");
-    z-index: 10000199999;
-}
-
-#ticketsBtn {
-    width: 9em;
-    height: 3.7em;
-    z-index: 100000000;
-    position: absolute;
-    right: 3em;
-    top: 3.65em;
-    background-image: url("../img/ticketsBtn.png");
-    background-size: cover;
-}
-
-#footer {
-    display: block;
-    position: absolute;
-    top: 100%;
-    height: 8em;
-    width: 100%;
-    z-index: 100000000;
-}
-
-#footerText {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.3em;
-}
-
-.footerLogos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "f t g";
-    align-items: center;
-    grid-gap: 2em;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0em;
-    margin: auto;
-    height: 50%;
-    width: 10.5em;
-}
-
-.footerLogo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2em;
-    width: 2em;
-    background-size: cover;
-    background-color: transparent;
-}
-
-#facebook {
-    grid-area: f;
-    background-image: url("../img/facebookLogo.png");
-}
-
-#twitter {
-    left: -0.25em;
-    width: 2.5em;
-    grid-area: t;
-    background-image: url("../img/twitterLogo.png");
-}
-
-#github {
-    grid-area: g;
-    background-image: url("../img/githubLogo.png");
-}
-
-/* Venue Section */
-
-#venue {
-    background-color: #28315A;
-    position: absolute;
-    top: 100%;
     z-index: 1000;
 }
 
-#venueInformation {
-    background-color: #28315A;
-    background-color: transparent;
+/* Hero section */
+
+#hero>#background {
+    z-index: 0;
 }
 
-/* Grids */
-
-.timerGrid, .venueGrid {
-    display: grid;
+#hero>#content {
+    grid-template-rows: repeat(3, 1fr);
 }
 
-/* Timer */
-
-#days {
-    grid-area: d;
+#timer, #header {
+    z-index: 1;
 }
 
-#hours {
-    grid-area: h;
+#foreground {
+    z-index: 2;
+    background-image: url('../img/heroForeground.png');
 }
 
-#minutes {
-    grid-area: m;
+#planets {
+    background-image: url('../img/planets.png');
 }
 
-#seconds {
-    grid-area: s;
+#stars {
+    background-image: url('../img/stars.png');
 }
 
-/* Desktop */
+#falcon {
+    background-image: url('../img/falcon.png');
+}
+
+#meteor {
+    background-image: url('../img/meteor.png');
+}
+
+#redirectButtons * {
+    display: inline-block;
+    position: relative;
+    top: 5rem;
+    background-size: cover;
+    z-index: 100;
+}
+
+#ticketsBtn {
+    width: 12.7rem;
+    height: 8.625rem;
+    margin: 0 auto;
+    background-image: url('../img/ticketsBtn.png');
+}
+
+.secondaryBtn {
+    width: 9.525rem;
+    height: 6.46875rem;
+    top: 4.2rem !important;
+}
+
+#volunteerBtn {
+    margin: 0 5rem 0 auto;
+    background-image: url('../img/volunteer.png');
+}
+
+#mentorBtn {
+    margin: 0 auto 0 5rem;
+    background-image: url('../img/mentor.png');
+}
 
 /* Timer */
 
@@ -222,22 +134,21 @@ section {
     grid-template-areas: "d h m s" "d h m s";
     align-items: start;
     list-style: none;
-    padding: 13% 10% 0 10%;
-    margin: 0;
+    margin: 0 10%;
 }
 
 .timerText {
     font-family: Dodge;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     position: relative;
-    top: -1em;
+    top: -1rem;
     padding: 0;
     margin: 0;
 }
 
 .timerNumber {
     font-family: Bebas;
-    font-size: 6em;
+    font-size: 6rem;
     padding: 0;
     margin: 0;
 }
@@ -246,51 +157,70 @@ section {
 
 #title {
     position: relative;
-    top: 0;
     font-family: "Dodge";
-    font-size: 6em;
+    font-size: 6rem;
     width: 100%;
-    padding: 7% 0 0 0;
+    margin: -7% 0 0 0;
     z-index: 1000;
 }
 
 #eventInfo {
     position: relative;
-    top: -0.5em;
+    top: -1.4rem;
     font-family: "Bebas";
-    font-size: 2em;
+    font-size: 2rem;
     z-index: 1000;
 }
 
-/* FAQ */
+/* FAQ Section */
 
-.faqGrid {
-    display: grid;
+#faq {
+    top: -1px;
+    height: auto;
+    background-image: url('../img/faqBG.png');
+    background-size: cover;
+    z-index: 100;
+    padding-bottom: 1rem;
+}
+
+#faqExplanation {
+    display: none;
+}
+
+#faqTitle {
+    position: relative;
+    background-image: url('../img/faqRibbon.png');
+    background-size: cover;
+    top: 4rem;
+    width: 22rem;
+    height: 6rem;
+    margin: 0 auto 8rem auto;
+}
+
+#faqGrid {
+    position: relative;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0;
-    grid-row-gap: 5em;
+    grid-row-gap: 3em;
     z-index: 999999999;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 0;
-    left: 0;
-    padding-top: 6em;
-    padding-bottom: 5em;
-    height: 210%;
+    margin-bottom: 5em;
     width: 100%;
 }
 
 .faqQuestion {
     position: relative;
     bottom: 0;
-    margin: auto;
+    margin: 0 auto;
     height: 370px;
     width: 290px;
+    z-index: 0;
 }
 
 .faqQuestion:hover {
-    box-shadow: 0 -10px 100px rgba(138, 138, 138, 0.3); 
+    box-shadow: 0 -10px 100px rgba(138, 138, 138, 0.3);
+    z-index: 1;
 }
 
 .questionBG {
@@ -304,7 +234,6 @@ section {
 }
 
 .questionIcon {
-    /* background-color: red; */
     color: white;
     margin: auto;
     position: relative;
@@ -318,13 +247,13 @@ section {
     font-weight: 500;
     margin-left: 5px;
     margin-right: 5px;
-    font-size: 1.5em;
+    font-size: 22px;
 }
 
 .questionText {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: bold;
-    font-size: 1em;
+    font-size: 15px;
     height: 100%;
     line-height: 195px;
     text-align: center;
@@ -352,36 +281,118 @@ span {
     background-color: #F49460
 }
 
-/* Venue */
+/* Sponsors section */
 
-.venueGrid {
-    height: 100%;
+#sponsors {
+    height: auto;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "i t";
-}
-
-#venuePicture {
-    background-image: url("../img/venue.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-top: -3.1rem;
+    background-image: url('../img/sponsorsBG.png');
     background-size: cover;
-    grid-area: "i";
 }
 
-#venueInformation {
-    grid-area: "t";
+#sponsorsTitle {
+    position: relative;
+    background-image: url('../img/sponsorsRibbon.png');
+    background-size: cover;
+    top: 8rem;
+    width: 37.5rem;
+    height: 6rem;
+    margin: 3rem auto 12rem auto;
 }
 
-#venueText {
-    height: 45%;
-    font-family: Candal;
+#sponsors header {
+    font-family: Dodge;
+    font-size: 2.3rem;
+}
+
+#sponsors img {
+    background-size: cover;
+    height: auto;
+    margin: 3.5rem auto;
+}
+
+#gold>header {
+    color: #e8bc03;
+}
+
+#webApps {
+    width: 40rem;
+}
+
+#silver>header {
     color: white;
 }
 
-#map {
-    width: 100%;
-    height: 51%;
+#githubLogo {
+    position: relative;
+    width: 23rem;
+    left: -2.5rem;
+}
+
+#bloomberg {
+    width: 33rem;
+    position: relative;
+    left: 2.5rem;
+    top: -0.3rem;
+}
+
+#bronze>header {
+    color: #cd7f32;
+}
+
+#morganStanley {
+    width: 37rem;
+}
+
+/* Footer */
+
+#footer {
+    padding-top: 3rem;
+    display: block;
+    height: 8rem;
+}
+
+#footerText {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+.footerLogos {
+    position: relative;
+    top: -1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "f t g";
+    align-items: center;
+    grid-gap: 2rem;
+    margin: 0 auto;
+    height: 50%;
+    width: 10.5rem;
+}
+
+.footerLogo {
+    height: 2rem;
+    width: 2rem;
+    background-size: cover;
+    background-color: transparent;
+}
+
+#facebook {
+    grid-area: f;
+    background-image: url("../img/facebookLogo.png");
+}
+
+#twitter {
+    left: -0.25rem;
+    width: 2.5rem;
+    grid-area: t;
+    background-image: url("../img/twitterLogo.png");
+}
+
+#github {
+    grid-area: g;
+    background-image: url("../img/githubLogo.png");
 }
 
 /* Tablet */
@@ -389,72 +400,166 @@ span {
 @media(max-width: 1024px) {
     /* Core */
     #foreground {
-        z-index: -1000;
+        z-index: 0;
     }
-
+    /* Hero Section */
     /* Timer */
     #timer {
-        padding: 20% 10% 0 10%;
+        padding: 5% 10% 0 10%;
         margin: 0;
     }
     /* Title */
     #title {
-        font-size: 4em;
-        padding: 10% 0 0 0;
+        font-size: 4rem;
+        padding: 5% 0 0 0;
     }
     #eventInfo {
-        font-size: 1.3em;
+        font-size: 1.5rem;
     }
     #logo {
-        top: 2em;
-        left: 2em;
-        height: 5em;
-        width: 5em;
+        top: 2rem;
+        left: 2rem;
+        height: 5rem;
+        width: 5rem;
+    }
+    /* Sponsors Section */
+    #webApps {
+        width: 30rem;
+    }
+    #githubLogo {
+        display: block;
+        width: 17rem;
+        left: 0;
+        margin-bottom: 0.5rem;
+    }
+    #bloomberg {
+        margin-top: 0.5rem;
+        width: 25rem;
+        left: 0;
+        top: -2rem;
+    }
+    #morganStanley {
+        width: 27rem;
     }
 }
 
 /* Phone */
 
 @media(max-width: 768px) {
+    /* Core */
+    #logo {
+        position: absolute;
+        background-size: cover;
+        top: 35%;
+        left: 40%;
+        height: 60px;
+        width: 60px;
+    }
+    /* Hero section */
+    /* Redirect Buttons */
+    #ticketsBtn {
+        width: 7.62rem !important;
+        height: 5.175rem !important;
+        top: 2.5rem !important;
+        left: 0;
+    }
+    .secondaryBtn {
+        width: 5.715rem;
+        height: 3.88125rem;
+        top: 1.9rem !important;
+    }
+    #volunteerBtn {
+        margin: 0 1rem 0 auto;
+    }
+    #mentorBtn {
+        margin: 0 auto 0 1rem;
+    }
     /* Timer */
     #timer {
+        position: relative;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "d h" "d h" "m s" "m s";
-        padding: 10% 10% 0 10%;
+        padding: 0 10%;
     }
     .timerNumber {
-        font-size: 4.5em;
+        font-size: 4rem;
     }
     .timerText {
-        font-size: 1em;
+        font-size: 0.7rem;
     }
     /* Title */
     #title {
-        font-size: 2em;
-        padding: 13% 0 0 0;
+        font-size: 2rem;
+        padding: 10% 0 0 0;
     }
     #eventInfo {
-        font-size: 1em;
+        padding-top: 1rem;
+        font-size: 1.3rem;
     }
-    /* Venue */
-    .venueGrid {
-        grid-template-columns: 1fr;
-        grid-template-areas: "i" "t";
+    /* FAQ Section */
+    #faqTitle {
+        width: 12.833rem;
+        height: 3.5rem;
+        margin: 0 auto 8rem auto;
     }
-    #logo {
-        top: 1em;
-        left: 1em;
-        height: 3em;
-        width: 3em;
+    #faqGrid {
+        display: block;
+        /* grid-template-columns: repeat(1, 1fr); */
     }
-    .faqGrid {
-        grid-template-columns: repeat(1, 1fr);
+    #faqExplanation {
+        font-family: Dodge;
+        display: block;    
     }
+    /* Sponsors Section */
+    #sponsorsTitle {
+        top: 4rem;
+        width: 21.875rem;
+        height: 3.5rem;
+        margin: 0 auto 7rem auto;
+    }
+    #webApps {
+        width: 20rem;
+    }
+    #githubLogo {
+        display: block;
+        width: 13rem;
+        left: 0;
+        margin-bottom: 0;
+    }
+    #bloomberg {
+        margin-top: 0;
+        width: 18rem;
+        left: 0;
+        top: -3rem;
+    }
+    #morganStanley {
+        width: 20rem;
+    }
+}
 
+/* Small Phone */
+
+@media(max-width: 345px) {
+    /* Redirect Buttons */
     #ticketsBtn {
-        width: 4.5em;
-        height: 1.85em;
-        right: 1em;
-        top: 1.575em;
+        width: 6.626rem !important;
+        height: 4.5rem !important;
+        top: 2.5rem !important;
+        left: 0;
+    }
+    .secondaryBtn {
+        width: 5.715rem;
+        height: 3.88125rem;
+        top: 2.3rem !important;
+    }
+    /* FAQ Section */
+    #faqTitle {
+        width: 10.99rem;
+        height: 3rem;
+    }
+    /* Sponsors Section */
+    #sponsorsTitle {
+        width: 18.75rem;
+        height: 3rem;
     }
 }

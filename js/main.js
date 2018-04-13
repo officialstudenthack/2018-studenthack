@@ -25,17 +25,50 @@ var x = setInterval(function () {
 
 }, 1000);
 
+if ($(window).width() <= 768)
+{
+    $('#logo').css('left', ($(window).width() - 60) / 2);
+    $('#logo').css('top', ($('#timer').height() - $('#logo').width()) / 2 + $('#timer').offset().top);
+    $('#faqGrid').slick({
+        autoplay: true,
+        autoplaySpeed: 9000
+    });
+}
+
+
+$(window).resize(function () {
+    if ($(window).width() <= 768) {
+        $('#logo').css('left', ($(window).width() - $('#logo').width()) / 2);
+        $('#logo').css('top', ($('#timer').height() - $('#logo').width()) / 2 + $('#timer').offset().top);
+        $('#faqGrid').slick({
+            autoplay: true,
+            autoplaySpeed: 9000
+        });
+    }
+    else if ($(window).width() <= 1024) {
+        $('#logo').css('left', '2rem');
+        $('#logo').css('top', '2rem');
+    }
+    else {
+        $('#logo').css('left', '3rem');
+        $('#logo').css('top', '3rem');
+    }
+    if ($(window).width() > 768) {
+        $('#faqGrid').slick("unslick");
+    }
+})
+
 // Parallax
 
-$(window).scroll(function () {
+$('body').scroll(function () {
     parallax();
 })
 
 function parallax() {
-    if ($(document).width() < 1024)
+    if ($(document).width() <= 1024)
         return;
-        
-    var wScroll = $(window).scrollTop();
+
+    var wScroll = $('body').scrollTop();
 
     var fastDelta = 0.4;
     var mediumDelta = 0.6;
@@ -50,7 +83,7 @@ function parallax() {
 
     var falconLeft = $('#falcon').css('left');
     var meteorLeft = $('#meteor').css('left');
-    
+
     $('#falcon').css('left', falconLeft - (wScroll * fastDelta / falconXRatio) + 'px');
     $('#meteor').css('left', meteorLeft - (wScroll * mediumDelta / meteorXRatio) + 'px');
     // $('#faq').css('background-position-y', '1000px');
