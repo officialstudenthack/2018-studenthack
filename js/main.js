@@ -28,8 +28,8 @@ var x = setInterval(function () {
 if ($(window).width() <= 768)
 {
     $('#logo').css('left', ($(window).width() - 60) / 2);
-    $('#logo').css('top', ($('#timerPhone').height() - $('#logo').width()) / 2 + $('#timerPhone').offset().top);
-    $('#faqGridPhone').slick({
+    $('#logo').css('top', ($('#timer').height() - $('#logo').width()) / 2 + $('#timer').offset().top);
+    $('#faqGrid').slick({
         autoplay: true,
         autoplaySpeed: 9000
     });
@@ -39,8 +39,8 @@ if ($(window).width() <= 768)
 $(window).resize(function () {
     if ($(window).width() <= 768) {
         $('#logo').css('left', ($(window).width() - $('#logo').width()) / 2);
-        $('#logo').css('top', ($('#timerPhone').height() - $('#logo').width()) / 2 + $('#timerPhone').offset().top);
-        $('#faqGridPhone').slick({
+        $('#logo').css('top', ($('#timer').height() - $('#logo').width()) / 2 + $('#timer').offset().top);
+        $('#faqGrid').slick({
             autoplay: true,
             autoplaySpeed: 9000
         });
@@ -54,7 +54,7 @@ $(window).resize(function () {
         $('#logo').css('top', '3rem');
     }
     if ($(window).width() > 768) {
-        $('#faqGridPhone').slick("unslick");
+        $('#faqGrid').slick("unslick");
     }
 })
 
