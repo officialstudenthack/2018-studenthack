@@ -22,7 +22,7 @@
             <div id="meteor" class="fullscreen parallax--medium"></div>
         </div>
         <div id="foreground" class="fullscreen"></div>
-        <div id="content" class="fullscreen grid parallax--fast">
+        <div id="content" class="fullscreen parallax--fast">
             <div id="redirectButtons">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxXLqlWuSdFvCUYN5gNEBi7MllFh1xPtkkEMroVNVmpMCDgw/viewform" target="_blank"
                     id="volunteerBtn" class="secondaryBtn"></a>
@@ -30,7 +30,7 @@
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOF052JIinAYxuYoRneYZFRz-pSoqBqEMniOOIxFApRkJcVA/viewform " target="_blank"
                     id="mentorBtn" class="secondaryBtn"></a>
             </div>
-            <ul id="timer" class="grid text">
+            <ul id="timer" class="text">
                 <li id="days">
                     <p id="daysNumber" class="timerNumber">25</p>
                     <p class="timerText">Days</p>
@@ -48,6 +48,28 @@
                     <p class="timerText">Seconds</p>
                 </li>
             </ul>
+            <div id="timerPhone" class="text">
+                <div class="timerRow">
+                    <div id="days">
+                        <p id="daysNumber" class="timerNumber">25</p>
+                        <p class="timerText">Days</p>
+                    </div>
+                    <div id="hours">
+                        <p id="hoursNumber" class="timerNumber">20</p>
+                        <p class="timerText">Hours</p>
+                    </div>
+                </div>
+                <div class="timerRow">
+                    <div id="minutes">
+                        <p id="minutesNumber" class="timerNumber">40</p>
+                        <p class="timerText">Minutes</p>
+                    </div>
+                    <div id="seconds">
+                        <p id="secondsNumber" class="timerNumber">20</p>
+                        <p class="timerText">Seconds</p>
+                    </div>
+                </div>
+            </div>
             <div id="header">
                 <header id="title" class="text">StudentHack VI</header>
                 <p id="eventInfo" class="text">MMU Business School, Manchester
@@ -58,7 +80,120 @@
     <section id="faq">
         <div id="faqTitle"></div>
         <p id="faqExplanation" class="text">swipe to find out more</p>
-        <div id="faqGrid" class="grid">
+        <div id="faqGrid">
+            <div class="faqRow">
+                <div class="faqQuestion cyanMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-money-bill-alt fa-4x questionIcon"></i>
+                        <p class="questionTitle text">Are tickets free?</p>
+                        <p class="questionText text">Yes, 100%</p>
+                    </div>
+                </div>
+                <div class="faqQuestion cyanMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-ticket-alt fa-4x questionIcon"></i>
+                        <p class="questionTitle text">Who can get a ticket?</p>
+                        <p class="questionText text">
+                            <span>
+                                All enrolled students over 18 and those who graduated in the last one year.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion cyanMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-globe fa-4x questionIcon"></i>
+                        <p class="questionTitle text">What if I study
+                            <br>outside the UK?</p>
+                        <p class="questionText text">
+                            <span>
+                                You are still welcome to join us! However, we cannot sponsor visas.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="faqRow">
+                <div class="faqQuestion orangeMarker">
+                    <div class="questionBG">
+                        <div class="questionBG">
+                            <i class="fas fa-question-circle fa-4x questionIcon"></i>
+                            <p class="questionTitle text">I haven’t coded much. Should I come?</p>
+                            <p class="questionText text">
+                                <span>
+                                    Hackathons are for beginners. Networking with and seeing awesome hackers in action will expose you to a tremendous amount
+                                    of knowledge. There is an amazing suit of industry experts and mentors that are happy
+                                    to assist you!
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faqQuestion orangeMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-laptop fa-4x questionIcon"></i>
+                        <p class="questionTitle text">What should I bring?</p>
+                        <p class="questionText text">
+                            <span>
+                                Bring your laptop, phone and chargers. Other things to consider: spare clothes, adapters, hardware and a sleeping bag, oh
+                                and don’t forget your enthusiasm! We are going to provide you with all the food, swag, sleeping
+                                rooms and the drinks that you will need.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion orangeMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-users fa-4x questionIcon"></i>
+                        <p class="questionTitle text">I don’t have a team. Help?</p>
+                        <p class="questionText text">
+                            <span>
+                                We encourage everybody to form a team with new people, regardless of whether you come with your buddies or not! We will organise
+                                a team-building session, where you will meet other participants just like you. We ask for
+                                the teams to be of 4 people maximum.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="faqRow">
+                <div class="faqQuestion redMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-star fa-4x questionIcon"></i>
+                        <p class="questionTitle text">What can I expect from StudentHack?</p>
+                        <p class="questionText text">
+                            <span>
+                                An entire weekend of great company, good food and plenty of swag! We’ll also have hardware and tons of mentors.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion redMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-plane fa-4x questionIcon"></i>
+                        <p class="questionTitle text">Do you offer travel reimbursement?</p>
+                        <p class="questionText text">
+                            <span>
+                                Unfortunately, we cannot reimburse you for your travel expenses.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="faqQuestion redMarker">
+                    <div class="questionBG">
+                        <i class="fas fa-copyright fa-4x questionIcon"></i>
+                        <p class="questionTitle text">Who owns my IP/code/idea?</p>
+                        <p class="questionText text">
+                            <span>
+                                You own all the rights to your intellectual property. We won’t claim any right over anything made during this event. Neil
+                                Armstrong will not ask for anything this time.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="faqGridPhone">
             <div class="faqQuestion cyanMarker">
                 <div class="questionBG">
                     <i class="fas fa-money-bill-alt fa-4x questionIcon"></i>
@@ -191,11 +326,11 @@
         </div>
         <div id="footer">
             <p id="footerText" class="text">© 2018 HackSoc</p>
-            <span class="footerLogos">
+            <div class="footerLogos">
                 <a target="_blank" href="https://www.facebook.com/studenthack/" class="footerLogo" id="facebook"></a>
                 <a target="_blank" href="https://twitter.com/studenthack" class="footerLogo" id="twitter"></a>
                 <a target="_blank" href="https://github.com/hacksoc-manchester/2018-studenthack" class="footerLogo" id="github"></a>
-            </span>
+            </div>
         </div>
     </section>
     <div id="logo"></div>

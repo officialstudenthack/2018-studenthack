@@ -37,17 +37,13 @@ section {
 .fullscreen {
     position: absolute;
     background-size: cover;
-    background-position-y: bottom;
+    background-position: 0 100%;
     height: 100%;
     width: 100%;
 }
 
 .text {
     color: white;
-}
-
-.grid {
-    display: grid;
 }
 
 #logo {
@@ -68,10 +64,6 @@ section {
 }
 
 #hero>#content {
-    grid-template-rows: repeat(3, 1fr);
-}
-
-#timer, #header {
     z-index: 1;
 }
 
@@ -96,10 +88,15 @@ section {
     background-image: url('../img/meteor.png');
 }
 
+#redirectButtons {
+    display: block;
+    position: relative;
+    margin: 5rem auto;
+}
+
 #redirectButtons * {
     display: inline-block;
     position: relative;
-    top: 5rem;
     background-size: cover;
     z-index: 100;
 }
@@ -114,7 +111,7 @@ section {
 .secondaryBtn {
     width: 9.525rem;
     height: 6.46875rem;
-    top: 4.2rem !important;
+    top: -0.8rem !important;
 }
 
 #volunteerBtn {
@@ -128,13 +125,27 @@ section {
 }
 
 /* Timer */
+#timerContainer {
+    display: block;
+}
+
 
 #timer {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "d h m s" "d h m s";
-    align-items: start;
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     list-style: none;
-    margin: 0 10%;
+    margin: 7rem auto;
+}
+
+#timerPhone {
+    display: none;
+}
+
+#timer>li {
+    margin: 0 6%;
 }
 
 .timerText {
@@ -160,7 +171,6 @@ section {
     font-family: "Dodge";
     font-size: 6rem;
     width: 100%;
-    margin: -7% 0 0 0;
     z-index: 1000;
 }
 
@@ -197,16 +207,20 @@ section {
     margin: 0 auto 8rem auto;
 }
 
+.faqRow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
 #faqGrid {
     position: relative;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0;
-    grid-row-gap: 3em;
-    z-index: 999999999;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 5em;
     width: 100%;
+}
+
+#faqGridPhone {
+    display: none;
 }
 
 .faqQuestion {
@@ -224,23 +238,22 @@ section {
 }
 
 .questionBG {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px 30px 195px;
-    grid-row-gap: 0;
+    display: flex;
+    flex-direction: column;
     height: 98%;
     width: 100%;
     background-color: #231F30;
 }
 
 .questionIcon {
+    height: 120px;
     color: white;
     margin: auto;
     position: relative;
 }
 
 .questionTitle {
-    height: 100%;
+    height: 30px;
     position: relative;
     top: -30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -254,7 +267,9 @@ section {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: bold;
     font-size: 15px;
-    height: 100%;
+    position: relative;
+    top: -50px;
+    height: 195px;
     line-height: 195px;
     text-align: center;
     margin-left: 5px;
@@ -359,19 +374,18 @@ span {
 }
 
 .footerLogos {
+    display: flex;
+    justify-content: center;
     position: relative;
     top: -1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "f t g";
-    align-items: center;
-    grid-gap: 2rem;
     margin: 0 auto;
     height: 50%;
-    width: 10.5rem;
+    width: 100%;
 }
 
 .footerLogo {
+    margin: 1rem 1rem;
+    display: inline-block;
     height: 2rem;
     width: 2rem;
     background-size: cover;
@@ -379,19 +393,16 @@ span {
 }
 
 #facebook {
-    grid-area: f;
     background-image: url("../img/facebookLogo.png");
 }
 
 #twitter {
     left: -0.25rem;
     width: 2.5rem;
-    grid-area: t;
     background-image: url("../img/twitterLogo.png");
 }
 
 #github {
-    grid-area: g;
     background-image: url("../img/githubLogo.png");
 }
 
@@ -405,13 +416,16 @@ span {
     /* Hero Section */
     /* Timer */
     #timer {
-        padding: 5% 10% 0 10%;
-        margin: 0;
+        padding: 0;
+        margin: 10rem auto 6    rem auto;
+    }
+
+    #timer>li {
+        margin: 0 4.5%;
     }
     /* Title */
     #title {
         font-size: 4rem;
-        padding: 5% 0 0 0;
     }
     #eventInfo {
         font-size: 1.5rem;
@@ -457,16 +471,19 @@ span {
     }
     /* Hero section */
     /* Redirect Buttons */
+    #redirectButtons {
+        margin-top: 2.3rem;
+        top: 0 !important;
+    }
     #ticketsBtn {
         width: 7.62rem !important;
         height: 5.175rem !important;
-        top: 2.5rem !important;
         left: 0;
     }
     .secondaryBtn {
         width: 5.715rem;
         height: 3.88125rem;
-        top: 1.9rem !important;
+        top: -0.6rem !important;
     }
     #volunteerBtn {
         margin: 0 1rem 0 auto;
@@ -476,10 +493,19 @@ span {
     }
     /* Timer */
     #timer {
-        position: relative;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "d h" "d h" "m s" "m s";
-        padding: 0 10%;
+        display: none;
+        /* padding: 0 10%; */
+    }
+    #timerPhone {
+        display: block;
+        margin-bottom: 5rem;
+    }
+    .timerRow {
+        display: flex;
+        justify-content: center;
+    }
+    .timerRow * {
+        margin: 0 auto;
     }
     .timerNumber {
         font-size: 4rem;
@@ -503,12 +529,14 @@ span {
         margin: 0 auto 8rem auto;
     }
     #faqGrid {
+        display: none;
+    }
+    #faqGridPhone {
         display: block;
-        /* grid-template-columns: repeat(1, 1fr); */
     }
     #faqExplanation {
         font-family: Dodge;
-        display: block;    
+        display: block;
     }
     /* Sponsors Section */
     #sponsorsTitle {
@@ -541,16 +569,18 @@ span {
 
 @media(max-width: 345px) {
     /* Redirect Buttons */
+    #redirectButtons {
+        top: 2.5rem !important;
+    }
     #ticketsBtn {
         width: 6.626rem !important;
         height: 4.5rem !important;
-        top: 2.5rem !important;
         left: 0;
     }
     .secondaryBtn {
         width: 5.715rem;
         height: 3.88125rem;
-        top: 2.3rem !important;
+        top: -0.2rem !important;
     }
     /* FAQ Section */
     #faqTitle {
