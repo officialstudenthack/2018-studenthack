@@ -231,7 +231,7 @@ section {
     position: relative;
     bottom: 0;
     margin: 0 auto;
-    height: 370px;
+    height: auto;
     width: 290px;
     z-index: 0;
 }
@@ -263,8 +263,7 @@ section {
     top: -30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 500;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 5px;
     font-size: 22px;
 }
 
@@ -277,15 +276,13 @@ section {
     height: 195px;
     line-height: 195px;
     text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
 span {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin: 0 0.5em;
     line-height: normal;
 }
 
@@ -420,8 +417,7 @@ span {
 
 /* Big Screens */
 
-@media(min-height: 950px)
-{
+@media(min-height: 950px) {
     #timer {
         margin: 7% auto;
     }
