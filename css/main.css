@@ -68,6 +68,7 @@ section {
 }
 
 #foreground {
+    pointer-events: none;
     z-index: 2;
     background-image: url('../img/heroForeground.png');
 }
