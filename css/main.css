@@ -243,10 +243,10 @@ section {
     height: auto;
     width: 290px;
     z-index: 0;
+    transition: all .3s; 
 }
 
 .faqQuestion:hover {
-    box-shadow: 0 -10px 100px rgba(138, 138, 138, 0.3);
     z-index: 1;
 }
 
