@@ -22,6 +22,10 @@ var x = setInterval(function () {
     document.getElementById("hoursNumber").innerHTML = hours;
     document.getElementById("minutesNumber").innerHTML = minutes;
     document.getElementById("secondsNumber").innerHTML = seconds;
+    document.getElementById("daysNumberP").innerHTML = days;
+    document.getElementById("hoursNumberP").innerHTML = hours;
+    document.getElementById("minutesNumberP").innerHTML = minutes;
+    document.getElementById("secondsNumberP").innerHTML = seconds;
 
 }, 1000);
 
