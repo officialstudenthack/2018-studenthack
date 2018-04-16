@@ -34,10 +34,8 @@ var x = setInterval(function () {
 $(function(){
     $('.faqQuestion').hover(function() {
         $(this).css('box-shadow', '0 -10px 100px rgba(138, 138, 138, 0.3)');
-        console.log("hello");
     }, function() {
         $(this).css('box-shadow', 'none');
-        console.log("bye");
     })
   })
   
