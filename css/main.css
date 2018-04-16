@@ -227,6 +227,15 @@ section {
     display: none;
 }
 
+#slideshowProgressBar {
+    display: none;
+    position: relative;
+    top: -5px;
+    width: 100%;
+    height: 5px;
+    background-color: #13c3d2;
+}
+
 .faqQuestion {
     position: relative;
     bottom: 0;
@@ -361,9 +370,39 @@ span {
     width: 37rem;
 }
 
+/* Venue section */
+
+#venue {
+    height: auto;
+    background-image: url('../img/venueBG.png');
+    background-repeat: no-repeat;
+}
+
+#venueTitleContainer {
+    padding-top: 8rem;
+    width: 27.3rem;
+    height: 6rem;
+    margin: 0 auto 6rem auto;
+}
+
+#venueTitle {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/venueRibbon.png');
+    background-size: cover;
+}
+
+#map {
+    margin: 5rem auto 0 auto;
+    background-color: #231F30;
+    width: 50%;
+    height: 20rem;
+}
+
 /* Footer */
 
 #footer {
+    position: relative;
     padding-top: 3rem;
     display: block;
     height: 8rem;
@@ -470,6 +509,10 @@ span {
     #morganStanley {
         width: 27rem;
     }
+    /* Venue section */
+    #map {
+        width: 70%;
+    }
 }
 
 /* Phone */
@@ -549,6 +592,9 @@ span {
     #faqGridPhone {
         display: block;
     }
+    #slideshowProgressBar {
+        display: block;
+    }
     #faqExplanation {
         font-family: Dodge;
         display: block;
@@ -578,6 +624,16 @@ span {
     #morganStanley {
         width: 20rem;
     }
+    /* Venue section */
+    #venueTitleContainer {
+        padding-top: 0;
+        width: 15.925rem;
+        height: 3.5rem;
+    }
+    #map {
+        width: 100%;
+        height: 30rem;
+    }
 }
 
 /* Small Phone */
@@ -601,6 +657,11 @@ span {
     /* Sponsors Section */
     #sponsorsTitle {
         width: 18.75rem;
+        height: 3rem;
+    }
+    /* Venue section */
+    #venueTitleContainer {
+        width: 13.65rem;
         height: 3rem;
     }
 }
