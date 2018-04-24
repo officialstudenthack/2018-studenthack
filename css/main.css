@@ -341,8 +341,16 @@ span {
     color: #e8bc03;
 }
 
+#thg {
+    position: relative;
+    top: -2.5rem;
+    width: 23rem;
+}
+
 #webApps {
-    width: 40rem;
+    position: relative;
+    left: -5rem;
+    width: 37rem;
 }
 
 #silver>header {
@@ -351,15 +359,21 @@ span {
 
 #githubLogo {
     position: relative;
-    width: 23rem;
-    left: -2.5rem;
+    width: 15rem;
+    left: -1rem;
 }
 
 #bloomberg {
-    width: 33rem;
+    width: 25rem;
     position: relative;
-    left: 2.5rem;
     top: -0.3rem;
+}
+
+#twillio {
+    position: relative;
+    width: 20rem;
+    left: 1.8rem;
+    top: 0.3rem;
 }
 
 #bronze>header {
@@ -367,7 +381,15 @@ span {
 }
 
 #morganStanley {
-    width: 37rem;
+    width: 27rem;
+    position: relative;
+    left: -2rem;
+}
+
+#codeThink {
+    width: 25rem;
+    position: relative;
+    left: 2rem;
 }
 
 /* Venue section */
@@ -496,8 +518,16 @@ span {
         width: 5rem;
     }
     /* Sponsors Section */
+    #thg {
+        position: relative;
+        width: 18rem;
+        top: -1.5rem;
+        left: -1rem;
+    }
+    
     #webApps {
-        width: 30rem;
+        width: 27rem;
+        left: 0;
     }
     #githubLogo {
         display: block;
@@ -506,13 +536,28 @@ span {
         margin-bottom: 0.5rem;
     }
     #bloomberg {
+        display: block;
         margin-top: 0.5rem;
         width: 25rem;
         left: 0;
         top: -2rem;
     }
+    #twillio {
+        display: block;
+        left: 0;
+        top: -2.8rem;
+    }
     #morganStanley {
-        width: 27rem;
+        display: block;
+        width: 23rem;
+        left: 0;
+    }
+
+    #codeThink {
+        width: 25rem;
+        position: relative;
+        top: -4rem;
+        left: 0;
     }
     /* Venue section */
     #map {
@@ -612,7 +657,14 @@ span {
         margin: 0 auto 7rem auto;
     }
     #webApps {
+        left: 0;
         width: 20rem;
+    }
+    #thg {
+        display: block;
+        width: 16rem;
+        left: 0;
+        top: -4rem;
     }
     #githubLogo {
         display: block;
@@ -621,13 +673,23 @@ span {
         margin-bottom: 0;
     }
     #bloomberg {
+        display: block;
         margin-top: 0;
         width: 18rem;
         left: 0;
-        top: -3rem;
+        top: -2rem;
+    }
+    #twillio {
+        display: block;
+        width: 16rem;
+        left: 0;
+        top: -4rem;
     }
     #morganStanley {
-        width: 20rem;
+        width: 18rem;
+    }
+    #codeThink {
+        width: 15rem;
     }
     /* Venue section */
     #venueTitleContainer {
