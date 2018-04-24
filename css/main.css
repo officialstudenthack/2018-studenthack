@@ -113,8 +113,8 @@ section {
 }
 
 .secondaryBtn {
-    width: 9.525rem;
-    height: 6.46875rem;
+    width: 12.7rem;
+    height: 8.625rem;
     top: -0.8rem !important;
 }
 
@@ -124,7 +124,7 @@ section {
 }
 
 #mentorBtn {
-    margin: 0 auto 0 5rem;
+    margin: 1rem auto -1rem auto;
     background-image: url('../img/mentor.png');
 }
 
@@ -496,6 +496,10 @@ span {
         z-index: 0;
     }
     /* Hero Section */
+    #mentorBtn {
+        width: 10.7rem;
+        height: 7.125rem;
+    }
     /* Timer */
     #timer {
         padding: 0;
