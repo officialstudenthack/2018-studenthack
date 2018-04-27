@@ -17,6 +17,7 @@
 
 html, body {
     height: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -126,6 +127,11 @@ section {
 #mentorBtn {
     margin: 1rem auto -1rem auto;
     background-image: url('../img/mentor.png');
+}
+
+#guidebookBtn {
+    margin: 1rem auto -1rem auto;
+    background-image: url('../img/guidebook.png');
 }
 
 /* Timer */
@@ -716,6 +722,7 @@ span {
 
 @media(max-width: 345px) {
     #ticketsBtn {
+        max-width: 100%;
         width: 6.626rem !important;
         height: 4.5rem !important;
         left: 0;
