@@ -107,30 +107,32 @@ section {
 }
 
 #ticketsBtn {
-    width: 12.7rem;
-    height: 8.625rem;
-    margin: 0 auto;
-    background-image: url('../img/ticketsBtn.png');
+    position: relative;
+    top: 1.4rem;
+    width: 15.24rem;
+    height: 10.3rem;
+    margin: 0 3rem;
+    background-image: url('../img/hubBtn.png');
 }
 
 .secondaryBtn {
-    width: 12.7rem;
-    height: 8.625rem;
-    top: -0.8rem !important;
+    width: 12.7rem !important;
+    height: 8.625rem  !important;
+    top: 0.3rem !important;
 }
 
 #volunteerBtn {
-    margin: 0 5rem 0 auto;
-    background-image: url('../img/volunteer.png');
+    margin: 0 0 0 auto;
+    background-image: url('../img/guidebook.png');
 }
 
 #mentorBtn {
-    margin: 1rem auto -1rem auto;
-    background-image: url('../img/mentor.png');
+    margin: 0 0 0 auto;
+    background-image: url('../img/slackBtn.png');
 }
 
 #guidebookBtn {
-    margin: 1rem auto -1rem auto;
+    margin: 0 auto 0 auto;
     background-image: url('../img/guidebook.png');
 }
 
@@ -152,6 +154,14 @@ section {
 
 #timerPhone {
     display: none;
+}
+
+#endedText {
+    display: none;
+    font-family: Dodge;
+    font-size: 8rem;
+    margin: 3rem auto;
+    color: white;
 }
 
 #timer>li {
@@ -613,8 +623,14 @@ span {
 /* Phone */
 
 @media(max-width: 768px) {
+    #endedText {
+        font-size: 5rem;
+        margin: 8rem auto 3rem auto;
+    }
+
     /* Core */
     #logo {
+        display: none;
         position: absolute;
         background-size: cover;
         top: 35%;
@@ -624,25 +640,26 @@ span {
     }
     /* Hero section */
     /* Redirect Buttons */
-    #redirectButtons {
+    .redirectButtons {
         margin-top: 2.3rem;
-        top: 0 !important;
+        top: 0rem !important;
     }
     #ticketsBtn {
         width: 7.62rem !important;
         height: 5.175rem !important;
+        margin: 0 0.2rem;
         left: 0;
     }
     .secondaryBtn {
-        width: 5.715rem;
-        height: 3.88125rem;
-        top: -0.6rem !important;
+        width: 5.715rem !important;
+        height: 3.88125rem !important;
+        top: -0.5rem !important;
     }
     #volunteerBtn {
-        margin: 0 1rem 0 auto;
+        margin: 0 1rem 0 0;
     }
     #mentorBtn {
-        margin: 0 auto 0 1rem;
+        margin: 0 0 0 1rem;
     }
     /* Timer */
     #timer {

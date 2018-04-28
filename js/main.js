@@ -9,6 +9,15 @@ var x = setInterval(function () {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    if (distance < 0) {
+        $('#timerPhone').remove();
+        $('#timer').remove();
+        $('#endedText').css({
+            display: "block"
+        });
+        return;
+    }
+
     if (hours < 10)
         hours = "0" + hours;
     if (days < 10)
