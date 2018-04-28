@@ -123,17 +123,17 @@ section {
 
 #volunteerBtn {
     margin: 0 0 0 auto;
-    background-image: url('../img/guidebook.png');
+    background-image: url('../img/slackBtn.png');
 }
 
 #mentorBtn {
     margin: 0 0 0 auto;
-    background-image: url('../img/slackBtn.png');
+    background-image: url('../img/guidebook.png');
 }
 
 #guidebookBtn {
     margin: 0 auto 0 auto;
-    background-image: url('../img/guidebook.png');
+    background-image: url('../img/slackBtn.png');
 }
 
 /* Timer */
