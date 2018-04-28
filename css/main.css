@@ -17,6 +17,7 @@
 
 html, body {
     height: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -126,6 +127,11 @@ section {
 #mentorBtn {
     margin: 1rem auto -1rem auto;
     background-image: url('../img/mentor.png');
+}
+
+#guidebookBtn {
+    margin: 1rem auto -1rem auto;
+    background-image: url('../img/guidebook.png');
 }
 
 /* Timer */
@@ -243,7 +249,7 @@ section {
     height: auto;
     width: 290px;
     z-index: 0;
-    transition: all .3s; 
+    transition: all .3s;
 }
 
 .faqQuestion:hover {
@@ -317,13 +323,22 @@ span {
 }
 
 #sponsorsTitle {
-    position: relative;
-    background-image: url('../img/sponsorsRibbon.png');
-    background-size: cover;
     top: 8rem;
+    background-image: url('../img/sponsorsRibbon.png');
+    margin: 3rem auto 12rem auto;
+}
+
+#partnersTitle {
+    font-family: Dodge;
+    margin-top: 10rem;
+    font-size: 2.3rem;
+}
+
+.orangeRibbon {
+    background-size: cover;
+    position: relative;
     width: 37.5rem;
     height: 6rem;
-    margin: 3rem auto 12rem auto;
 }
 
 #sponsors header {
@@ -391,7 +406,20 @@ span {
     position: relative;
     left: 2rem;
 }
-
+#msp {
+    width: 18rem;
+    position: relative;
+    top: -2rem;
+    left: 0;
+    margin: 0 5rem 0 0;
+}
+#gazzette {
+    width: 26rem;
+    position: relative;
+    top: -1rem;
+    left: 0;
+    margin-left: 5rem;
+}
 /* Venue section */
 
 #venue {
@@ -433,7 +461,7 @@ span {
     padding-top: 3rem;
     display: block;
     height: 8rem;
-}   
+}
 
 #footerText {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -528,7 +556,6 @@ span {
         top: -1.5rem;
         left: -1rem;
     }
-    
     #webApps {
         width: 27rem;
         left: 0;
@@ -556,11 +583,25 @@ span {
         width: 23rem;
         left: 0;
     }
-
     #codeThink {
         width: 25rem;
         position: relative;
         top: -4rem;
+        left: 0;
+    }
+    #partnersTitle {
+        margin-top: -2rem;
+    }
+    #msp {
+        width: 18rem;
+        position: relative;
+        top: -2rem;
+        left: 0;
+    }
+    #gazzette {
+        width: 23rem;
+        position: relative;
+        top: -1rem;
         left: 0;
     }
     /* Venue section */
@@ -656,9 +697,15 @@ span {
     /* Sponsors Section */
     #sponsorsTitle {
         top: 4rem;
+        margin: 0 auto 7rem auto;
+    }
+    #partnersTitle {
+        top: -3rem;
+        margin: 0 auto;
+    }
+    .orangeRibbon {
         width: 21.875rem;
         height: 3.5rem;
-        margin: 0 auto 7rem auto;
     }
     #webApps {
         left: 0;
@@ -695,6 +742,12 @@ span {
     #codeThink {
         width: 15rem;
     }
+    #msp {
+        width: 10rem;
+    }
+    #gazzette {
+        width: 15rem;
+    }
     /* Venue section */
     #venueTitleContainer {
         padding-top: 0;
@@ -716,6 +769,7 @@ span {
 
 @media(max-width: 345px) {
     #ticketsBtn {
+        max-width: 100%;
         width: 6.626rem !important;
         height: 4.5rem !important;
         left: 0;
@@ -731,7 +785,7 @@ span {
         height: 3rem;
     }
     /* Sponsors Section */
-    #sponsorsTitle {
+    .orangeRibbon {
         width: 18.75rem;
         height: 3rem;
     }
